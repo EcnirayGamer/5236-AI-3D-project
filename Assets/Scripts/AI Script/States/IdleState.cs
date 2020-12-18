@@ -40,7 +40,7 @@ public class IdleState : AbstractState
             {
                 _fsm.EnterState(FSMStateType.PATROL);
             }
-            else if (Vector3.Distance(_navMeshAgent.transform.position, player.transform.position) >= chaseRadius)
+            else if (Vector3.Distance(_navMeshAgent.transform.position, player.transform.position) <= chaseRadius)
             {
                 _fsm.EnterState(FSMStateType.CHASING);
             }
