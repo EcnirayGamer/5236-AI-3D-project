@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AlertState : AbstractState
 {
-    [SerializeField] private GameObject player;
+    private GameObject player = GameObject.Find("Player");
     [SerializeField] private GameObject stimulant;
     [SerializeField] private float chaseRadius;
     private bool alert;

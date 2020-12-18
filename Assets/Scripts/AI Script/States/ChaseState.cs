@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Chase State", menuName = "AI-FSM/States/Chase", order = 2)]
 public class ChaseState : AbstractState
 {
-    public GameObject player;
+    private GameObject player = GameObject.Find("Player");
     public float chaseRadius;
     private float playerDistance;
 

@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd46c5c0ee91eb749a3f529c5c9c81d4, type: 3}
   m_Name: Patrol State
   m_EditorClassIdentifier: 
+  chaseRadius: 5

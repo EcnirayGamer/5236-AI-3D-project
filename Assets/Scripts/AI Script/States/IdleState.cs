@@ -5,21 +5,16 @@ using UnityEditorInternal;
 [CreateAssetMenu(fileName = "IdleState", menuName = "AI-FSM/States/Idle", order = 1)]
 public class IdleState : AbstractState
 {
-    [SerializeField]
-    private float _idelDuration = 3f;
-
-    [SerializeField]
-    private GameObject player;
-
-    [SerializeField]
-    private float chaseRadius;
-
+    [SerializeField] private float _idelDuration = 3f;
+    private GameObject player = GameObject.Find("Player");
+    [SerializeField] private float chaseRadius;
     private float _totalDuration;
 
     public override void OnEnable()
     {
         base.OnEnable();
         StateType = FSMStateType.IDLE;
+        Debug.Log(player);
     }
 
     public override bool EnterState()

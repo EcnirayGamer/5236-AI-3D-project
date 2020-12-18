@@ -430,7 +430,7 @@ Transform:
   m_GameObject: {fileID: 163842248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 8.4744, y: 4, z: 10.03}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 171357555}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1509,7 +1509,6 @@ GameObject:
   - component: {fileID: 1250308945}
   - component: {fileID: 1250308944}
   - component: {fileID: 1250308947}
-  - component: {fileID: 1250308948}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
@@ -1628,6 +1627,7 @@ MonoBehaviour:
   _validStates:
   - {fileID: 11400000, guid: c73e5bf5a0a84c04f8f3ab2d0f2a5870, type: 2}
   - {fileID: 11400000, guid: 1d2acda07652bbc4fa3e7f16288c5f85, type: 2}
+  - {fileID: 11400000, guid: 3dd0a41efb58ec8488a7a2cc116c4ca7, type: 2}
 --- !u!114 &1250308946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1662,32 +1662,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1250308948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1250308939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77db070cb20a18f408a6b68f43d2b1fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewRadius: 8
-  meshResolution: 6
-  edgeCounter: 2
-  edgeDstThreshold: 0.5
-  maskCutAway: 0.5
-  viewAngle: 90
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 256
-  obsticalMask:
-    serializedVersion: 2
-    m_Bits: 512
-  visibleTargets: []
-  viewMeshFilter: {fileID: 817909020}
 --- !u!1 &1389805008
 GameObject:
   m_ObjectHideFlags: 0
