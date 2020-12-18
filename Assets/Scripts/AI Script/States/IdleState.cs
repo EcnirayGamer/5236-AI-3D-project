@@ -6,13 +6,14 @@ using UnityEditorInternal;
 public class IdleState : AbstractState
 {
     [SerializeField] private float _idelDuration = 3f;
-    private GameObject player = GameObject.Find("Player");
     [SerializeField] private float chaseRadius;
+    private GameObject player;
     private float _totalDuration;
 
     public override void OnEnable()
     {
         base.OnEnable();
+        player = GameObject.FindGameObjectWithTag("player");
         StateType = FSMStateType.IDLE;
         Debug.Log(player);
     }

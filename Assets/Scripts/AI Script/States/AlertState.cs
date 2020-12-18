@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AlertState : AbstractState
 {
-    private GameObject player = GameObject.Find("Player");
     [SerializeField] private GameObject stimulant;
     [SerializeField] private float chaseRadius;
+    private GameObject player;
     private bool alert;
     private Vector3 playerLastPos;
     private float playerDistance;
@@ -14,6 +14,7 @@ public class AlertState : AbstractState
     public void OnEnable()
     {
         base.OnEnable();
+        player = GameObject.FindGameObjectWithTag("player");
         StateType = FSMStateType.ALERT;
         //alert = stimulant;
     }

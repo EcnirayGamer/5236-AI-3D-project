@@ -6,14 +6,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Patrol State", menuName = "AI-FSM/States/Patrol", order = 1)]
 public class PatrolState : AbstractState
 {
-    private GameObject player = GameObject.Find("Player");
     [SerializeField] private float chaseRadius;
+    private GameObject player;
     private Waypoint[] _patrolPoints;
     private int _patrolPointIndex;
 
     public void OnEnable()
     {
         base.OnEnable();
+        player = GameObject.FindGameObjectWithTag("player");
         StateType = FSMStateType.PATROL;
         _patrolPointIndex = -1;
     }
